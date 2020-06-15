@@ -6,3 +6,6 @@ evaluate(new File(
         settingsDir
         , 'module_flutter/.android/include_flutter.groovy'
 ))
+
+//让Android Studio 去加载Flutter的模块。
+include ':module_flutter'
