@@ -1,0 +1,4 @@
+[submodule "module_flutter"]
+	path = module_flutter
+	url = ./module_flutter
+	branch = master
