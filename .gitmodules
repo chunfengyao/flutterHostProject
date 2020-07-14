@@ -1,4 +1,4 @@
 [submodule "module_flutter"]
 	path = module_flutter
-	url = ./module_flutter
+	url = http://10.241.65.201/yaochunfeng/moduleflutter.git
 	branch = master
