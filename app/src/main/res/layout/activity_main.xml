@@ -13,21 +13,52 @@
         android:text="启动一个Flutter页面"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/startNewFlutterPageSecondBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/startNewFlutterPageBtn"
+        android:onClick="startNewFlutterPageSecondBtnClick"
+        android:text="启动第二个Flutter页面" />
+    <Button
+        android:id="@+id/createNewFlutterFragBtn"
+        android:onClick="createNewFlutterFragBtnClick"
+        android:layout_below="@id/startNewFlutterPageSecondBtn"
+        android:text="创建一个Flutter控件在下方的视图容器内"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
     <Button
         android:id="@+id/createNewFlutterViewBtn"
         android:onClick="createNewFlutterViewBtnClick"
-        android:layout_below="@id/startNewFlutterPageBtn"
-        android:text="创建一个Flutter控件在下方的视图容器内(每次点击都是新的！)"
+        android:layout_below="@id/createNewFlutterFragBtn"
+        android:text="创建一个Flutter视图在下方的视图容器内"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
     <LinearLayout
-        android:id="@+id/flutterViewContainer"
         android:layout_below="@id/createNewFlutterViewBtn"
-        android:background="@color/pink"
+        android:background="@null"
         android:layout_margin="12dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical" />
+        android:weightSum="2"
+        android:orientation="vertical" >
+        <LinearLayout
+            android:id="@+id/flutterFragContainer"
+            android:background="@color/pink"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1"/>
+        <io.flutter.embedding.android.FlutterView
+            android:id="@+id/flutterViewContainer"
+            android:background="@color/lightPink"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_weight="1"/>
+    </LinearLayout>
 
 
 </RelativeLayout>
