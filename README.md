@@ -4,8 +4,10 @@ flutter 的 Android 宿主项目
 
 ### project environment:
 - init and update the dependent project(path : module_flutter).
-`git submodule init`
-`git submodule update`
+```bash
+git submodule init
+git submodule update
+```
 
 
 ### prepare environment:
@@ -21,8 +23,9 @@ flutter 的 Android 宿主项目
 4. enjoy your coding!
 
 ### commond record:
-`cd module_flutter`
-`flutter build aar`
-`cd ..`
-`gradlew aDebug`
-
+```bash
+cd module_flutter
+flutter build aar
+cd ..
+gradlew aDebug
+```
