@@ -22,7 +22,7 @@ git submodule update
 3. back to you project root directory.
 4. enjoy your coding!
 
-### commond record:
+### Command record:
 ```bash
 cd module_flutter
 flutter build aar
