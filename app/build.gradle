@@ -12,8 +12,28 @@ android {
         versionName "1.0.0"
     }
 
-    buildTypes {
+    signingConfigs {
+        debug {
+            storeFile file('./fhp.jks')
+            storePassword 'flutter'
+            keyAlias = 'flutter'
+            keyPassword 'flutter'
+        }
+
         release {
+            storeFile file('./fhp.jks')
+            storePassword 'flutter'
+            keyAlias = 'flutter'
+            keyPassword 'flutter'
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
